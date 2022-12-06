@@ -1,0 +1,38 @@
+3 kesalahan yang paling sering dilakukan oleh QA
+  1. Tidak berani untuk bertanya atau memberi masukan
+    - Seorang QA harus berani bertanya, karena jika seorang QA tidak berani bertanya, maka hampir bisa dipastikan klo pemahaman terkait business rules nya kurang.
+      Ini memang perlu latihan dan pengalaman terutama bagi teman-teman QA yang pada dasarnya memang introvert, tapi jika dilatih dan dicoba terus menerus maka hal ini akan menjadi kebiasaan baik.
+    - Seorang QA juga harus bisa memberi masukan jika ada hal-jal yang dirasa perlu untuk diperhatikan.
+      Saat ada fitur yang akan di-develop, QA perlu memikirkan banyak aspek seperti bagaimana kemudahan untuk penggunaannya, bagaimana sudut pandang user, menjaga konsistensi dari suatu aplikasi.
+    - Contoh lainnya adalah jika requirement kurang detail atau ada poin-poin yang tidak tertuang dalam requirement maka QA harus aktif meminta PM/Product Owner untuk update requirement nya.
+      Saya menyebut requirement sebagai `kitab`. Karena memang di `kitab` inilah semua rules tercatat dan semua pihak akan menggunakan `kitab` yang sama.
+      Salah 1 tugas terpenting dari seorang QA adalah menjaga `kitab` selalu up-to-date.
+  2. Tidak memahami business rules dari aplikasi/fitur dengan baik
+    - Masih berhubungan dengan poin 1. Untuk dapat memahami busines rules dengan baik salah satu caranya adalah dengan bertanya. Semakin banyak kita bertanya maka pemahaman akan business rules pasti akan semakin baik dan luas.
+    - Seorang QA harus benar-benar aktif dalam setiap diskusi, mulai dari Sprint Planning pun seharusnya QA bisa melemparkan banyak pertanyaan.
+      Dengan begitu fitur yang akan di-develop pun akan semakin tajam dan detail serta case-case yang bisa di-cover akan lebih banyak.
+    - QA seharusnya menjadi salah 1 pihak yang memiliki pemahaman paling dalam terkait aplikasi.
+  3. Tidak segera report dan follow up saat menemukan bug
+    - QA harus segera follow up saat menemukan bug.
+    - Saat menemukan bug, QA harus memastikan terlebih dahulu bahwa bug tersebut reproduceable. Sehingga saat membuat bug ticket bisa memasukkan semua informasi yang dibutuh seperti how to reproduce, testing evidence.
+    - Setelah bug ticket dibuat, tugas QA tidak selesai sampai disitu. QA harus memastikan priority dari fix yang akan dilakukan oleh developer. Jika memanga bug severity nya Critical/Major dan priority nya high maka QA harus selalu aktif bertanya terkait update perbaikan dari bug tsb.
+    
+      
+Poin-poin terpenting yang harus diperhatikan dalam membuat skenario test
+    1. Test case coverage harus 100% terhadap requirement yang ada
+      - Poin terpenting nya adalah semua detail yang ada di requirement harus tercantum di dalam test case.
+    2. Pemahaman business rules
+      - Jika QA tidak memahami dengan dalam terkait business rules maka dapat dipastikan coverage test case juga tidak akan lengkap.
+    3. Test case yang dibuat harus mudah dipahami oleh orang lain
+      - Prinsip saya test case yang baik adalah jika orang lain bisa menggunakan test case yang kita buat tanpa bertanya, jadi saat membuat test case harus dipikirkan sebaik mungkin.
+      - Di dalam test case yang saya buat biasanya terdapat:
+        * Objective, setiap case harus mempunyai objective berbeda
+        * Precondition, hal-hal yang diperlukan sebelum melakukan melakukan steps dari test case
+        * Test Steps, langkah-langkah yang harus dilakukan untuk mendapatkan hasil yang diharapkan
+        * Expected Result, hasil yang diharapkan sesuai dengan requirement
+          - Di expected result, biasanya saya tulis se-detail mungkin. misal store data ke database, maka akan saya tulis di expected result ke database mana, table mana dan field/column apa data akan tersimpan.
+          - Dalam 1 case, bisa jadi akan ada lebih dari 1 atau banyak expected result, dan ini akan mengurangi testing yang berulang.
+    4. Bukti testing (screenshot/screen recording)
+      - Bukti testing cukup penting, tapi untuk beberapa kondisi bisa saja QA tidak perlu memasukkan bukti testing untuk setiap case yang sudah di-test
+        Biasanya ini terkait dengan test case management tools yang digunakan, contoh misal masih menggunakan excel/google sheet maka akan sulit untuk memasukkan bukti testing ke dalam masing-masing case
+      - Yang terpenting bukti testing harus ada di dalam setiap bug ticket yang dibuat.
